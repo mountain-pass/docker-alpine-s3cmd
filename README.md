@@ -1,5 +1,7 @@
 # mountainpass/s3cmd
 
+Containerised `s3cmd` command line tool - used for syncing files to/from s3 compatible buckets (e.g. DigitalOcean Spaces).
+
 ## Usage
 
 ```
