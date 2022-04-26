@@ -6,10 +6,13 @@ Containerised `s3cmd` command line tool - used for syncing files to/from s3 comp
 
 ```
 # setup
-docker run -it --rm -v `pwd`:/root mountainpass/s3cmd s3cmd --configure
+docker run -it --rm -v "$(pwd):/root" mountainpass/s3cmd s3cmd --configure
 
 # run
-docker run -it --rm -v `pwd`:/root mountainpass/s3cmd s3cmd sync ./yourfolder s3://yourbucket/ --acl-public --add-header=Cache-Control:max-age=3600 --recursive
+docker run -it --rm -v "$(pwd):/root" mountainpass/s3cmd s3cmd sync ./yourfolder s3://yourbucket/ \
+    --acl-public \
+    --add-header=Cache-Control:max-age=3600 \
+    --recursive
 ```
 
 ## Build
